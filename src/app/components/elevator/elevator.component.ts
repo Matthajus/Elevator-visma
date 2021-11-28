@@ -20,19 +20,27 @@ export class ElevatorComponent implements OnInit {
     console.log("Current floor: ", this.elevatorService.elevator.currentFloor);
   }
 
-
-  clickOnButton(button: HTMLButtonElement) {
-    this.selectedFloors.push(Number(button.id));
-    console.log(this.selectedFloors);
-  }
-
-
   clickOnGo() {
     this.selectedFloors = this.selectedFloors.filter(function(elem, index, self) {
       return index === self.indexOf(elem);
     });
 
     this.elevatorService.requestFloors(this.selectedFloors);
+
+    this.selectedFloors.forEach( id => {
+      let span: HTMLElement | null = document.getElementById(String(id));
+      // @ts-ignore
+      span.style.border = "2px solid #040a29";
+    })
+
     this.elevatorService.run();
+  }
+
+  clickOnSpan(span: HTMLSpanElement) {
+    this.selectedFloors.push(Number(span.id));
+    console.log(this.selectedFloors);
+
+    // @ts-ignore
+    span?.style.border = "1px solid greenyellow";
   }
 }

@@ -1,5 +1,13 @@
 h1 {
   text-align: center;
+  font-family: 'Comfortaa', cursive;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 40px;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-shadow: 3px 3px 20px #d400d4,
+  -2px 1px 30px #d400d4;
 }
 
 section {
@@ -56,4 +64,61 @@ label {
   font-weight: 900;
   font-style: normal;
   text-shadow: 0 1px 2px rgba(0,0,0,0.4)
+}
+
+.a-style {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background: white;
+  margin: 20px;
+}
+
+.a-style:before, .a-style:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #00ccff, #0e1538, #d400d4);
+  transition: 0.5s;
+}
+
+.a-style:hover:before {
+  inset: -3px;
+}
+
+.a-style:hover:after {
+  inset: -3px;
+  filter: blur(20px);
+}
+
+.span-style {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0e1538;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  border: 2px solid #040a29;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.span-style:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.075);
+  transform: skew(25deg);
 }

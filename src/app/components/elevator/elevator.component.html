@@ -2,18 +2,20 @@
 
 <div class="container">
 
+  <mat-divider></mat-divider>
+
   <section>
     <div class="button-row">
       <div class="flex-container">
         <div class="button-container">
-          <button  class="button-style" #button12 (click)="clickOnButton(button12)" id="12">
-            <label>12</label>
-          </button>
+          <a class="a-style">
+            <span class="span-style" #span12 (click)="clickOnSpan(span12)" id="12">12</span>
+          </a>
         </div>
         <div class="button-container">
-          <button  class="button-style" #button13 (click)="clickOnButton(button13)" id="13">
-            <label>13</label>
-          </button>
+          <a class="a-style">
+            <span class="span-style" #span13 (click)="clickOnSpan(span13)" id="13">13</span>
+          </a>
         </div>
       </div>
     </div>
@@ -23,31 +25,14 @@
     <div class="button-row">
       <div class="flex-container">
         <div class="button-container">
-          <button  class="button-style" #button10 (click)="clickOnButton(button10)" id="10">
-            <label>10</label>
-          </button>
+          <a class="a-style">
+            <span class="span-style" #span10 (click)="clickOnSpan(span10)" id="10">10</span>
+          </a>
         </div>
         <div class="button-container">
-          <button  class="button-style" #button11 (click)="clickOnButton(button11)" id="11">
-            <label>11</label>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="button-row">
-      <div class="flex-container">
-        <div class="button-container">
-          <button  class="button-style" #button8 (click)="clickOnButton(button8)" id="8">
-            <label>8</label>
-          </button>
-        </div>
-        <div class="button-container">
-          <button  class="button-style" #button9 (click)="clickOnButton(button9)" id="9">
-            <label>9</label>
-          </button>
+          <a class="a-style">
+            <span class="span-style" #span11 (click)="clickOnSpan(span11)" id="11">11</span>
+          </a>
         </div>
       </div>
     </div>
@@ -57,31 +42,14 @@
     <div class="button-row">
       <div class="flex-container">
         <div class="button-container">
-          <button  class="button-style" #button6 (click)="clickOnButton(button6)" id="6">
-            <label>6</label>
-          </button>
+          <a class="a-style">
+            <span class="span-style" #span8 (click)="clickOnSpan(span8)" id="8">8</span>
+          </a>
         </div>
         <div class="button-container">
-          <button  class="button-style" #button7 (click)="clickOnButton(button7)" id="7">
-            <label>7</label>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="button-row">
-      <div class="flex-container">
-        <div class="button-container">
-          <button  class="button-style" #button4 (click)="clickOnButton(button4)" id="4">
-            <label>4</label>
-          </button>
-        </div>
-        <div class="button-container">
-          <button  class="button-style" #button5 (click)="clickOnButton(button5)" id="5">
-            <label>5</label>
-          </button>
+          <a class="a-style">
+            <span class="span-style" #span9 (click)="clickOnSpan(span9)" id="9">9</span>
+          </a>
         </div>
       </div>
     </div>
@@ -91,14 +59,14 @@
     <div class="button-row">
       <div class="flex-container">
         <div class="button-container">
-          <button  class="button-style"#button2 (click)="clickOnButton(button2)" id="2">
-            <label>2</label>
-          </button>
+          <a class="a-style">
+            <span class="span-style" #span6 (click)="clickOnSpan(span6)" id="6">6</span>
+          </a>
         </div>
         <div class="button-container">
-          <button  class="button-style" #button3 (click)="clickOnButton(button3)" id="3">
-            <label>3</label>
-          </button>
+          <a class="a-style">
+            <span class="span-style" #span7 (click)="clickOnSpan(span7)" id="7">7</span>
+          </a>
         </div>
       </div>
     </div>
@@ -108,14 +76,48 @@
     <div class="button-row">
       <div class="flex-container">
         <div class="button-container">
-          <button  class="button-style" #button0 (click)="clickOnButton(button0)" id="0">
-            <label>0</label>
-          </button>
+          <a class="a-style">
+            <span class="span-style" #span4 (click)="clickOnSpan(span4)" id="4">4</span>
+          </a>
         </div>
         <div class="button-container">
-          <button class="button-style" #button1 (click)="clickOnButton(button1)" id="1">
-            <label>1</label>
-          </button>
+          <a class="a-style">
+            <span class="span-style" #span5 (click)="clickOnSpan(span5)" id="5">5</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="button-row">
+      <div class="flex-container">
+        <div class="button-container">
+          <a class="a-style">
+            <span class="span-style" #span2 (click)="clickOnSpan(span2)" id="2">2</span>
+          </a>
+        </div>
+        <div class="button-container">
+          <a class="a-style">
+            <span class="span-style" #span3 (click)="clickOnSpan(span3)" id="3">3</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="button-row">
+      <div class="flex-container">
+        <div class="button-container">
+          <a class="a-style">
+            <span class="span-style" #span0 (click)="clickOnSpan(span0)" id="0">0</span>
+          </a>
+        </div>
+        <div class="button-container">
+          <a class="a-style">
+            <span class="span-style" #span1 (click)="clickOnSpan(span1)" id="1">1</span>
+          </a>
         </div>
       </div>
     </div>
@@ -123,9 +125,8 @@
 
   <mat-divider></mat-divider>
 
-  <div>
-    <button mat-button (click)="clickOnGo()">GO</button>
-  </div>
-
+  <a class="a-style" style="width: 200px; height: 60px">
+    <span class="span-style" (click)="clickOnGo()">Go</span>
+  </a>
 
 </div>
