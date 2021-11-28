@@ -1,7 +1,5 @@
 import {Injectable} from '@angular/core';
 import {ElevatorClass} from "../models/elevator-class";
-import {ElevatorDirectionEnum} from "../models/elevator-direction-enum";
-import {timeout} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +12,13 @@ export class ElevatorService {
 
   run() {
     while (this.elevator.moveQueue.length !== 0) {
-      this.visitFloor(this.elevator.moveQueue[0]);
-    }
+      let current = this.elevator.currentFloor;
 
-    if (this.elevator.currentFloor === 0) {
-      this.elevator.direction = ElevatorDirectionEnum.MOVE_UP;
-    } else {
-      this.elevator.direction = ElevatorDirectionEnum.MOVE_DOWN;
+      let closestFloor = this.elevator.moveQueue.reduce(function(prev, curr) {
+        return (Math.abs(curr - current) < Math.abs(prev - current) ? curr : prev);
+      });
+
+      this.move(closestFloor);
     }
   }
 
@@ -28,11 +26,12 @@ export class ElevatorService {
     this.elevator.moveQueue = requestedFloors;
   }
 
-  visitFloor(floor: number) {
+  move(floor: number) {
     this.elevator.currentFloor = floor;
     console.log("Current floor is: " + floor);
-    this.elevator.moveQueue.shift();
-    timeout(3000);
+    this.elevator.moveQueue.forEach((element,index)=>{
+      if(element === floor)  this.elevator.moveQueue.splice(index, 1);
+    });
   }
 
 }

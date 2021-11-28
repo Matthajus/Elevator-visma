@@ -28,12 +28,6 @@ export class ElevatorComponent implements OnInit {
 
 
   clickOnGo() {
-    if (this.elevatorService.elevator.direction === "MOVE_UP") {
-      this.selectedFloors = this.selectedFloors.sort((n1,n2) => n1 - n2);
-    } else {
-      this.selectedFloors = this.selectedFloors.sort((n1,n2) => n2 - n1);
-    }
-
     this.selectedFloors = this.selectedFloors.filter(function(elem, index, self) {
       return index === self.indexOf(elem);
     });
